@@ -270,37 +270,44 @@ a.btn {
 .sub-heading {
   font-size: 15px;
   font-family: "Open Sans", sans-serif;
-  animation-delay: 820ms;
-  animation-name: block-from-right;
 }
 
 .main-heading {
-  animation-name: slide-in-up;
-  animation-duration: 1600ms;
-  animation-timing-function: cubic-bezier(0.22, 0.9, 0.29, 1);
-  animation-fill-mode: both;
   animation-delay: 1500ms;
 }
 
-@keyframes slide-in-up {
-  from {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
-/* block-from-right approximation (maps: sfx_effect "blockfromright") */
-@keyframes block-from-right {
+@-webkit-keyframes fadeInUp {
   from {
-    transform: translateX(100%);
     opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
   }
   to {
-    transform: translateX(0);
     opacity: 1;
+    -webkit-transform: none;
+    transform: none;
   }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
 }
