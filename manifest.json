@@ -1,0 +1,15 @@
+{
+  "name": "Random Facts",
+  "short_name": "Random Facts",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "img/favicon.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
